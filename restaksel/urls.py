@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from api.views import CreateSantri, GetAllSantri, GetSantriById, UpdateSantri
+from api.views import CreateSantri, GetAllSantri, GetSantriById, UpdateSantri, DeleteSantri
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +24,5 @@ urlpatterns = [
     path('santri/get/', GetAllSantri.as_view()),
     path('santri/update/<str:nis>/', UpdateSantri.as_view()),
     path('santri/get/<str:nis>/', GetSantriById.as_view()),
+    path('santri/delete/<str:nis>/', DeleteSantri.as_view()),
 ]

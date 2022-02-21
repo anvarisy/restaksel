@@ -103,3 +103,21 @@ class GetSantriById(View):
             "data":santri
             }
         )
+
+class DeleteSantri(View):
+    def post(self, request, nis):
+        try:
+            santri = Santri.objects.get(nis=nis)
+        except:
+             return JsonResponse(
+                {
+                "status":False,
+                "message":"Santri not found",
+                })
+        santri.delete()
+        return JsonResponse(
+            {
+            "status":True,
+            "message":"Data santri berhasil dihapus",
+            }
+        )

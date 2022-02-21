@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "c8b61c61-9161-401b-8910-ca19ffabcd82",
+		"name": "Rest aksel django",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nis_santri\":\"1234564\",\r\n    \"email_santri\":\"koalapanda@gmail.com\",\r\n    \"password_santri\":\"my_password\",\r\n    \"name_santri\":\"Koala Panda\",\r\n    \"gender_santri\":\"L\",\r\n    \"address_santri\":\"Bogor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/santri/create/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"santri",
+						"create",
+						""
+					]
+				},
+				"description": "Save santri"
+			},
+			"response": []
+		},
+		{
+			"name": "get all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/santri/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"santri",
+						"get"
+					]
+				},
+				"description": "Get all santri"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email_santri\":\"koalapanda@gmail.com\",\r\n    \"password_santri\":\"my_password\",\r\n    \"name_santri\":\"Koala Panda\",\r\n    \"gender_santri\":\"P\",\r\n    \"address_santri\":\"Bogor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/santri/update/1234564/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"santri",
+						"update",
+						"1234564",
+						""
+					]
+				},
+				"description": "Update santri"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/santri/delete/1234568/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"santri",
+						"delete",
+						"1234568",
+						""
+					]
+				},
+				"description": "Delete santri"
+			},
+			"response": []
+		},
+		{
+			"name": "detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/santri/get/1234567",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"santri",
+						"get",
+						"1234567"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
